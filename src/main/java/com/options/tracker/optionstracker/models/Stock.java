@@ -1,4 +1,4 @@
-package com.options.tracker.optionstracker;
+package com.options.tracker.optionstracker.models;
 
 public class Stock {
     private String stockTicker;
