@@ -105,4 +105,7 @@ public class StockLockupModel {
         this.offerSize = offerSize;
         this.ipoDate = ipoDate;
     }
+
+	public StockLockupModel() {
+	}
 }
