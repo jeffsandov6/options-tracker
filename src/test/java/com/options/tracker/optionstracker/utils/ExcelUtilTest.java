@@ -1,21 +1,24 @@
 package com.options.tracker.optionstracker.utils;
 
-import com.options.tracker.optionstracker.JavaFXThreadingRule;
-import com.options.tracker.optionstracker.JfxTestRunner;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.List;
+
+import com.options.tracker.optionstracker.DividendDataTasks;
 import com.options.tracker.optionstracker.StockLockoutTasks;
+import com.options.tracker.optionstracker.models.DividendDataModel;
 import com.options.tracker.optionstracker.models.StockLockupModel;
+import com.options.tracker.optionstracker.thirdPartyApi.FinancialModelingPrep;
 
-import org.junit.Rule;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-
 import javafx.stage.Stage;
 
-@RunWith(JfxTestRunner.class)
 public class ExcelUtilTest {
 
     ExcelUtil excelUtil = new ExcelUtil();
     StockLockoutTasks stockLockoutTasks = new StockLockoutTasks();
+    FinancialModelingPrep financialModelingPrep = new FinancialModelingPrep();
 
     @Test
     public void getStockLockupsFromExcelTest() throws Exception {
@@ -32,15 +35,23 @@ public class ExcelUtilTest {
         stockLockoutTasks.getHistoricalPricesInFile();
     }
 
-    @Rule public JavaFXThreadingRule javafxRule = new JavaFXThreadingRule();
     @Test
-    public void createLineGraphTest() throws Exception {
-        StockLockupModel stockLockupModel = new StockLockupModel(
-            "ZI", "ZoomInfo Technologies", "$41.76", "12/1/20", "44,500,000", "$21.00", "$934,500,000", "6/4/20"
-        );
+    public void test() throws IOException {
+        DividendDataTasks dividendDataTasks = new DividendDataTasks();
 
-        Stage stage = new Stage();
-        stockLockoutTasks.createLineGraph(stockLockupModel, stage);
+        String resp = dividendDataTasks.getDividendDataFromApi("2020-12-02");
+        List<DividendDataModel> listOfDividendDataModel = dividendDataTasks.getDividendDataFromResponse(resp);
+        
+        for(DividendDataModel curDividendDataModel: listOfDividendDataModel) {
+            financialModelingPrep.putHistoricalPricesWithinTimeFrameInFile(
+                curDividendDataModel.getSymbol(), "historicalPricesSince2019",
+                "2019-01-01", "2021-02-01"
+            );
+
+            financialModelingPrep.putHistoricalDividendInFile(
+                curDividendDataModel.getSymbol(), "historicalDividends");
+        }
+        
     }
     
 }
