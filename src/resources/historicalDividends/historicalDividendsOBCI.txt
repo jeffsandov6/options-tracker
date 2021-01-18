@@ -1,0 +1,82 @@
+{
+  "symbol" : "OBCI",
+  "historical" : [ {
+    "date" : "2020-12-02",
+    "label" : "December 02, 20",
+    "adjDividend" : 0.0200000000,
+    "dividend" : 0.02,
+    "recordDate" : "2020-12-3",
+    "paymentDate" : "2020-12-17",
+    "declarationDate" : "2020-11-23"
+  }, {
+    "date" : "2020-09-08",
+    "label" : "September 08, 20",
+    "adjDividend" : 0.0200000000,
+    "dividend" : 0.02,
+    "recordDate" : "2020-09-09",
+    "paymentDate" : "2020-09-23",
+    "declarationDate" : "2020-08-26"
+  }, {
+    "date" : "2020-06-08",
+    "label" : "June 08, 20",
+    "adjDividend" : 0.0400000000,
+    "dividend" : 0.02,
+    "recordDate" : "2020-06-09",
+    "paymentDate" : "2020-06-23",
+    "declarationDate" : "2020-05-27"
+  }, {
+    "date" : "2019-04-04",
+    "label" : "April 04, 19",
+    "adjDividend" : 0.0500000000,
+    "dividend" : 0.05,
+    "recordDate" : "2019-04-05",
+    "paymentDate" : "2019-04-19",
+    "declarationDate" : "2019-03-26"
+  }, {
+    "date" : "2018-03-29",
+    "label" : "March 29, 18",
+    "adjDividend" : 0.0600000000,
+    "dividend" : 0.06,
+    "recordDate" : "2018-04-02",
+    "paymentDate" : "2018-04-16",
+    "declarationDate" : "2018-03-21"
+  }, {
+    "date" : "2017-04-25",
+    "label" : "April 25, 17",
+    "adjDividend" : 0.0600000000,
+    "dividend" : 0.06,
+    "recordDate" : "2017-04-27",
+    "paymentDate" : "2017-05-11",
+    "declarationDate" : "2017-04-17"
+  }, {
+    "date" : "2016-04-08",
+    "label" : "April 08, 16",
+    "adjDividend" : 0.0600000000,
+    "dividend" : 0.06,
+    "recordDate" : "2016-04-12",
+    "paymentDate" : "2016-04-26",
+    "declarationDate" : "2016-03-31"
+  }, {
+    "date" : "2014-03-28",
+    "label" : "March 28, 14",
+    "adjDividend" : 0.0500000000,
+    "dividend" : 0.05,
+    "recordDate" : "2014-04-01",
+    "paymentDate" : "2014-04-15",
+    "declarationDate" : "2014-03-18"
+  }, {
+    "date" : "1997-04-29",
+    "label" : "April 29, 97",
+    "adjDividend" : 0.0329000000,
+    "recordDate" : "",
+    "paymentDate" : "",
+    "declarationDate" : ""
+  }, {
+    "date" : "1996-04-29",
+    "label" : "April 29, 96",
+    "adjDividend" : 0.0329000000,
+    "recordDate" : "",
+    "paymentDate" : "",
+    "declarationDate" : ""
+  } ]
+}

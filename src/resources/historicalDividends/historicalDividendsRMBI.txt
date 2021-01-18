@@ -1,0 +1,28 @@
+{
+  "symbol" : "RMBI",
+  "historical" : [ {
+    "date" : "2020-12-02",
+    "label" : "December 02, 20",
+    "adjDividend" : 0.0500000000,
+    "dividend" : 0.05,
+    "recordDate" : "2020-12-3",
+    "paymentDate" : "2020-12-17",
+    "declarationDate" : "2020-11-18"
+  }, {
+    "date" : "2020-09-02",
+    "label" : "September 02, 20",
+    "adjDividend" : 0.0500000000,
+    "dividend" : 0.05,
+    "recordDate" : "2020-09-03",
+    "paymentDate" : "2020-09-17",
+    "declarationDate" : "2020-08-19"
+  }, {
+    "date" : "2020-06-03",
+    "label" : "June 03, 20",
+    "adjDividend" : 0.0500000000,
+    "dividend" : 0.05,
+    "recordDate" : "2020-06-04",
+    "paymentDate" : "2020-06-18",
+    "declarationDate" : "2020-05-21"
+  } ]
+}
